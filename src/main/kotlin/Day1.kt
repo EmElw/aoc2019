@@ -4,7 +4,6 @@ fun main() {
     println("1.2:" + sumFuelRec(input))
 }
 
-// fun calcFuel(v: Int): Int = (floor(v / 3.0)).toInt() - 2
 fun calcFuel(v: Int): Int = v / 3 - 2
 
 fun sumFuel(modules: List<Int>): Int = modules.map { calcFuel(it) }.sum()

@@ -26,7 +26,7 @@ fun intCodeExec(input: List<Int>): List<Int> {
         when (list[pc]) {
             1 -> list[pos] = op1 + op2
             2 -> list[pos] = op1 * op2
-            else -> throw error("Unrecognized op code")
+            else -> throw error("Unrecognized op code ${list[pc]}")
         }
         pc += 4
     }

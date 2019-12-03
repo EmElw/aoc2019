@@ -7,6 +7,7 @@ import java.lang.Exception
 
 const val R_PATH = "src/main/resources/"
 
+// fetches all available inputs
 fun main() {
     for (n in 1..24) {
         try {
