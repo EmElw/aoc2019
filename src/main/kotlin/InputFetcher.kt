@@ -25,8 +25,8 @@ fun defaultSessionToken() = File("${R_PATH}session.txt")
     .use { it.readText() }
 
 fun getInput(
-    day: Int, session:
-    String = defaultSessionToken()
+    day: Int,
+    session: String = defaultSessionToken()
 ): String {
     val file = File("${R_PATH}input$day")
     if (file.exists()) {
