@@ -28,8 +28,6 @@ fun getInput(
     day: Int, session:
     String = defaultSessionToken()
 ): String {
-    val cookies = mapOf("session" to session)
-
     val file = File("${R_PATH}input$day")
     if (file.exists()) {
         return file
