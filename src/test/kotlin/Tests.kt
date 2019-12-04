@@ -3,6 +3,7 @@ import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestFactory
 import org.junit.jupiter.api.function.Executable
+import kotlin.math.exp
 
 
 class Day1Tests {
@@ -60,6 +61,7 @@ class Day3Tests {
             Assertions.assertEquals(expected, solve3task1(processInput(input)))
         }
     }
+
     @TestFactory
     fun `Day 3 task 2`() = listOf(
         "R8,U5,L5,D3\nU7,R6,D4,L4" to 30,
@@ -71,6 +73,36 @@ class Day3Tests {
     ).map { (input, expected) ->
         DynamicTest.dynamicTest("Day 3 task 2: input $input, expected $expected") {
             Assertions.assertEquals(expected, solve3task2(processInput(input)))
+        }
+    }
+}
+
+
+class Day4Tests {
+    @TestFactory
+    fun `Day 4 task 1`() = listOf(
+        "699065" to false,
+        "111111" to true,
+        "223450" to false,
+        "123789" to false
+    ).map { (input, expected) ->
+        DynamicTest.dynamicTest("Day 4 task 1: input $input, expected $expected") {
+            Assertions.assertEquals(expected, criteria(input))
+        }
+    }
+
+    @TestFactory
+    fun `Day 4 task 2`() = listOf(
+        "699065" to false,
+        "111111" to false,
+        "223450" to false,
+        "123789" to false,
+        "112233" to true,
+        "123444" to false,
+        "111122" to true
+    ).map { (input, expected) ->
+        DynamicTest.dynamicTest("Day 4 task 1: input $input, expected $expected") {
+            Assertions.assertEquals(expected, criteria2(input))
         }
     }
 }

@@ -32,9 +32,8 @@ fun solve3task2(wires: Pair<Wire, Wire>): Int {
     val intersects = mapWire(wires.first) intersect mapWire(wires.second)
     return intersects
         .filter { (it.x != 0) and (it.y != 0) }
-        .map { intersect ->
-            s1.find { it eqCoordinate intersect }!!.travel
-            +s2.find { it eqCoordinate intersect }!!.travel
+        .map { point ->
+            s1.find { it eqCoordinate point }!!.travel + s2.find { it eqCoordinate point }!!.travel
         }
         .min()!!
 }
