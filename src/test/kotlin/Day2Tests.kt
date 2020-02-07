@@ -12,8 +12,8 @@ class Day2Tests {
         )
         assertions.forEach {
             Assertions.assertEquals(
-                it.second,
-                intCodeExec(it.first).first
+                it.second.map(Int::toBigInteger),
+                intCodeExec(it.first.map(Int::toBigInteger)).code
             )
         }
     }

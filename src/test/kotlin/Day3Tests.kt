@@ -7,9 +7,9 @@ class Day3Tests {
 
     @Test
     fun `Manhattan distance test`() {
-        Assertions.assertEquals(6, Point(3, 3) mhd Point(0, 0))
-        Assertions.assertEquals(10, Point(5, 2) mhd Point(-3, 4))
-        Assertions.assertEquals(2, Point(5, -5) mhd Point(3, -5))
+        Assertions.assertEquals(6, WPoint(3, 3) mhd WPoint(0, 0))
+        Assertions.assertEquals(10, WPoint(5, 2) mhd WPoint(-3, 4))
+        Assertions.assertEquals(2, WPoint(5, -5) mhd WPoint(3, -5))
     }
 
     @TestFactory

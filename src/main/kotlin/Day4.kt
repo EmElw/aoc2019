@@ -2,6 +2,7 @@ fun main() {
     val (lo, hi) = getInput(4).split("-").map { it.trim().toInt() }
     println("4.1:${(lo..hi).map { it.toString() }.filter { criteria(it) }.size}")
     println("4.2:${(lo..hi).map { it.toString() }.filter { criteria2(it) }.size}")
+
 }
 
 fun criteria(s: String): Boolean = all(

@@ -2,8 +2,6 @@ import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import java.io.File
-import java.io.InputStream
-import java.lang.Exception
 
 const val R_PATH = "src/main/resources/"
 
@@ -13,7 +11,7 @@ fun main() {
         try {
             getInput(n)
         } catch (e: Exception) {
-            println("Aborting after $n days")
+            println("Aborting at day $n")
             break
         }
     }
